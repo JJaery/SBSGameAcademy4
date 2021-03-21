@@ -1,0 +1,7 @@
+D:\JeonInJae\4thGit\2주차\Calculator\Calculator\bin\Debug\Calculator.exe.config
+D:\JeonInJae\4thGit\2주차\Calculator\Calculator\bin\Debug\Calculator.exe
+D:\JeonInJae\4thGit\2주차\Calculator\Calculator\bin\Debug\Calculator.pdb
+D:\JeonInJae\4thGit\2주차\Calculator\Calculator\obj\Debug\Calculator.csprojAssemblyReference.cache
+D:\JeonInJae\4thGit\2주차\Calculator\Calculator\obj\Debug\Calculator.csproj.CoreCompileInputs.cache
+D:\JeonInJae\4thGit\2주차\Calculator\Calculator\obj\Debug\Calculator.exe
+D:\JeonInJae\4thGit\2주차\Calculator\Calculator\obj\Debug\Calculator.pdb
