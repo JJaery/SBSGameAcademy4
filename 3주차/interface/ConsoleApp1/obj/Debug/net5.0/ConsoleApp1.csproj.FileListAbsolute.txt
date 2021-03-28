@@ -1,0 +1,16 @@
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.exe
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.deps.json
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.json
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.runtimeconfig.dev.json
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.dll
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\bin\Debug\net5.0\ref\ConsoleApp1.dll
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\bin\Debug\net5.0\ConsoleApp1.pdb
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.GeneratedMSBuildEditorConfig.editorconfig
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfoInputs.cache
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.AssemblyInfo.cs
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csproj.CoreCompileInputs.cache
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.dll
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ref\ConsoleApp1.dll
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.pdb
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.genruntimeconfig.cache
+D:\JeonInJae\4thGit\3주차\interface\ConsoleApp1\obj\Debug\net5.0\ConsoleApp1.csprojAssemblyReference.cache

@@ -1,0 +1,16 @@
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\bin\Debug\net5.0\InterfacePractice.exe
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\bin\Debug\net5.0\InterfacePractice.deps.json
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\bin\Debug\net5.0\InterfacePractice.runtimeconfig.json
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\bin\Debug\net5.0\InterfacePractice.runtimeconfig.dev.json
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\bin\Debug\net5.0\InterfacePractice.dll
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\bin\Debug\net5.0\ref\InterfacePractice.dll
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\bin\Debug\net5.0\InterfacePractice.pdb
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\InterfacePractice.csprojAssemblyReference.cache
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\InterfacePractice.GeneratedMSBuildEditorConfig.editorconfig
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\InterfacePractice.AssemblyInfoInputs.cache
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\InterfacePractice.AssemblyInfo.cs
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\InterfacePractice.csproj.CoreCompileInputs.cache
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\InterfacePractice.dll
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\ref\InterfacePractice.dll
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\InterfacePractice.pdb
+D:\JeonInJae\4thGit\3주차\interface\InterfacePractice\obj\Debug\net5.0\InterfacePractice.genruntimeconfig.cache
