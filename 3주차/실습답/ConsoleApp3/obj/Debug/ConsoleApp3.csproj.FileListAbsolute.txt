@@ -5,3 +5,10 @@ C:\Users\ADMIN\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.csprojAssemblyRefe
 C:\Users\ADMIN\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
 C:\Users\ADMIN\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.exe
 C:\Users\ADMIN\source\repos\ConsoleApp3\obj\Debug\ConsoleApp3.pdb
+D:\JeonInJae\4thGit\3주차\실습답\ConsoleApp3\bin\Debug\ConsoleApp3.exe.config
+D:\JeonInJae\4thGit\3주차\실습답\ConsoleApp3\bin\Debug\ConsoleApp3.exe
+D:\JeonInJae\4thGit\3주차\실습답\ConsoleApp3\bin\Debug\ConsoleApp3.pdb
+D:\JeonInJae\4thGit\3주차\실습답\ConsoleApp3\obj\Debug\ConsoleApp3.csprojAssemblyReference.cache
+D:\JeonInJae\4thGit\3주차\실습답\ConsoleApp3\obj\Debug\ConsoleApp3.csproj.CoreCompileInputs.cache
+D:\JeonInJae\4thGit\3주차\실습답\ConsoleApp3\obj\Debug\ConsoleApp3.exe
+D:\JeonInJae\4thGit\3주차\실습답\ConsoleApp3\obj\Debug\ConsoleApp3.pdb

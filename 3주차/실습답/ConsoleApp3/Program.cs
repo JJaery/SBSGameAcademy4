@@ -8,9 +8,9 @@ namespace ConsoleApp3
 {
     class Program
     {
+        static World world = new World();
         static void Main(string[] args)
         {
-            World world = new World();
             world.Init();
 
             foreach(Creature target in world.creatureList)
