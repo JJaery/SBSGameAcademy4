@@ -16,27 +16,33 @@ public class TicTakToe : MonoBehaviour
     /// </summary>
     public Text gameResultVictoryText;
 
-
+    /// <summary>
+    /// 현재 턴이 'O'턴인가?
+    /// </summary>
     private bool isTurnO = true;
-    private TicTakToeCell[,] cells = new TicTakToeCell[3, 3];
+
+    /// <summary>
+    /// 맵 - 보드판 (3x3 배열)
+    /// </summary>
+    private TicTakToeCell[,] cells = new TicTakToeCell[3,3];
 
     private void Start()
     {
-        gameResultPanel.SetActive(false);
+        gameResultPanel.SetActive(false); //실수방지
     }
 
     public void OnClickCell(TicTakToeCell cell)
     {
-        if(cell.currentState != TicTakToeCell.eState.None)
+        if(cell.currentState != TicTakToeCell.eState.None) // X나 O인 경우,
         {
-            return;
+            return; // 메소드 종료
         }
 
-        if (isTurnO == true)
+        if (isTurnO == true) //턴이 O인가?
         {
             cell.SetState(TicTakToeCell.eState.O);
         }
-        else // false
+        else // false, X턴이다.
         {
             cell.SetState(TicTakToeCell.eState.X);
         }
@@ -45,7 +51,7 @@ public class TicTakToe : MonoBehaviour
 
         CheckResult(cell);
 
-        isTurnO = !isTurnO;
+        isTurnO = !isTurnO; // bool값 반전 (true -> false, false -> true)
     }
 
     /// <summary>
@@ -53,9 +59,11 @@ public class TicTakToe : MonoBehaviour
     /// </summary>
     private void CheckResult(TicTakToeCell cell)
     {
+        if (cell.currentState == TicTakToeCell.eState.None)
+            return;
+
         //연달아서 3개가 같은 (none이 아닌) state인지 체크해야됨.
         //그러기 위해서 필요한 데이터 ? 셀들의 위치 값, 몇번째 칸에 있는지.
-
         int sameCount = 0;
 
         for (int x = -2; x <= 2; x++) // 좌우 라인 검사
@@ -72,7 +80,7 @@ public class TicTakToe : MonoBehaviour
         if (sameCount >= 3)
         {
             GameOver();
-            return;
+            return; 
         }
 
         sameCount = 0;
@@ -93,12 +101,64 @@ public class TicTakToe : MonoBehaviour
             GameOver();
             return;
         }
+
+        sameCount = 0;
+        //내려가는 대각선 검사 시작
+        for (int x = -2, y = -2; x <= 2 && y <= 2 ; x++, y++) 
+        {
+            //x -2 y -2
+            //x -1 y -1
+            // ....
+            //x 1 y 1
+            //x 2 y 2
+
+            if (cell.x + x < 0 || cell.x + x > 2 ||
+                cell.y + y < 0 || cell.y + y > 2 || cells[cell.x + x, cell.y + y] == null)
+                continue;
+
+            if (cells[cell.x + x, cell.y + y].currentState == cell.currentState)
+            {
+                sameCount += 1;
+            }
+        }
+
+        if(sameCount >= 3)
+        {
+            GameOver();
+            return;
+        }
+
+
+        sameCount = 0;
+        //올라가는 대각선 검사 시작
+        for (int x = -2, y = 2; x <= 2 && y >= -2; x++, y--)
+        {
+            //x -2 y 2
+            //x -1 y 1
+            // ....
+            //x 1 y -1
+            //x 2 y -2
+            if (cell.x + x < 0 || cell.x + x > 2 ||
+                cell.y + y < 0 || cell.y + y > 2 || cells[cell.x + x, cell.y + y] == null)
+                continue;
+
+            if (cells[cell.x + x, cell.y + y].currentState == cell.currentState)
+            {
+                sameCount += 1;
+            }
+        }
+
+        if (sameCount >= 3)
+        {
+            GameOver();
+            return;
+        }
     }
 
     private void GameOver()
     {
         gameResultVictoryText.text = string.Format(gameResultVictoryText.text, isTurnO == true ? "O" : "X");
-
+        
         //위 삼항연산자랑 같은 표현
         if(isTurnO == true)
         {

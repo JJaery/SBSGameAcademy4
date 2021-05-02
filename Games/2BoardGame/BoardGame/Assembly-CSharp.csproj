@@ -62,6 +62,7 @@
     <Compile Include="Assets\Scripts\SelectGame.cs" />
     <Compile Include="Assets\Scripts\Title.cs" />
     <Compile Include="Assets\Scripts\Othello.cs" />
+    <Compile Include="Assets\Scripts\OthelloCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
