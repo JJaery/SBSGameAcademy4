@@ -59,10 +59,10 @@
     <Compile Include="Assets\Scripts\TicTakToeCell.cs" />
     <Compile Include="Assets\Scripts\Baduk.cs" />
     <Compile Include="Assets\Scripts\TicTakToe.cs" />
+    <Compile Include="Assets\Scripts\OthelloCell.cs" />
     <Compile Include="Assets\Scripts\SelectGame.cs" />
     <Compile Include="Assets\Scripts\Title.cs" />
     <Compile Include="Assets\Scripts\Othello.cs" />
-    <Compile Include="Assets\Scripts\OthelloCell.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

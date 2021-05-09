@@ -7,6 +7,7 @@ public class OthelloCell : MonoBehaviour
 {
     public int x;
     public int y;
+    public Othello boardScript;
 
     public Image btnImage;
 
@@ -23,7 +24,6 @@ public class OthelloCell : MonoBehaviour
         /// </summary>
         Selectable
     }
-
 
     public void SetState(eState targetState)
     {
@@ -44,5 +44,13 @@ public class OthelloCell : MonoBehaviour
         }
 
         curState = targetState;
+    }
+
+    /// <summary>
+    /// Cell 버튼이 눌렸을 때
+    /// </summary>
+    public void OnClickButton()
+    {
+        boardScript.OnClickCell(this);
     }
 }
