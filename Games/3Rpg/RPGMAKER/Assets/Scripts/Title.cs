@@ -18,10 +18,10 @@ public class Title : MonoBehaviour
     {
         AsyncOperation ao = SceneManager.LoadSceneAsync("Game", LoadSceneMode.Additive);
         
-
         Debug.Log("씬 로딩 시작!");
         while (ao.isDone == false)
         {
+            Debug.Log(ao.progress);// 0.0~1.0f;
             yield return null;
         }
 
