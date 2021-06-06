@@ -24,4 +24,19 @@ public abstract class Character : MonoBehaviour
     }
 
     public abstract void Move();
+
+    public virtual void OnHitted(Character hitter)
+    {
+
+    }
+
+    public virtual void OnHitEvent()
+    {
+
+    }
+
+    public virtual void Attack()
+    {
+
+    }
 }

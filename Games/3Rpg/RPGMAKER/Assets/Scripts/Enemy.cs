@@ -36,6 +36,9 @@ public class Enemy : Character
     public eFsmState curState;
     public Vector3 moveDir;
 
+    [Header("공격 사정거리")]
+    public float attackRange;
+
     [Header("인식거리")]
     public float recogRange;
 
@@ -141,6 +144,7 @@ public class Enemy : Character
     #region Enter
     private void OnEnterIdleState()
     {
+        animator.SetBool("IsWalking", false);
         delayCoroutine = StartCoroutine(DelayChangePatrol());
     }
 
@@ -165,7 +169,7 @@ public class Enemy : Character
     }
     private void OnEnterAttackState()
     {
-
+        animator.SetBool("IsWalking", false);
     }
     #endregion
 
@@ -196,6 +200,10 @@ public class Enemy : Character
             attackTarget = null;
             ChangeState(eFsmState.Idle);
         }
+        else if(dist <= attackRange)
+        {
+            ChangeState(eFsmState.Attack);
+        }
         else
         {
             //dir은 길이가 있기 때문에 1로 맞춰줄 필요가 있다. (normalized, 방향만 알고 싶을 때 사용)
@@ -203,9 +211,32 @@ public class Enemy : Character
         }
     }
 
+    private float lastAttackTime;
+
     private void OnUpdateAttackState()
     {
+        if(attackTarget == null)
+        {
+            ChangeState(eFsmState.Idle);
+            return;
+        }
 
+        if (Vector2.Distance(this.transform.position, attackTarget.transform.position) > attackRange)
+        {
+            ChangeState(eFsmState.Trace);
+            return;
+        }
+
+        if(Time.time > lastAttackTime + 1)
+        {
+            Attack();
+            lastAttackTime = Time.time;
+        }
+    }
+
+    public override void Attack()
+    {
+        attackTarget.OnHitted(this);
     }
 
 
@@ -241,11 +272,52 @@ public class Enemy : Character
 
     public void Move(Vector3 dir)
     {
+        if (animator.GetBool("IsWalking") == false)
+        {
+            //x값 방향으로 이동?
+            if (dir.x != 0)
+            {
+                animator.SetTrigger("SetSide");
+            }
+            //y값 방향으로 이동?
+            else if (dir.y > 0)
+            {
+                animator.SetTrigger("SetBack");
+            }
+            else if (dir.y < 0)
+            {
+                animator.SetTrigger("SetForward");
+            }
+        }
+
+        spriteRenderer.flipX = dir.x < 0;
+        animator.SetBool("IsWalking", true);
+
         transform.position += dir * moveSpeed * Time.deltaTime;
     }
 
     public override void Move()
     {
 
+    }
+
+    public override void OnHitted(Character hitter)
+    {
+        this.hp -= hitter.dmg;
+        StartCoroutine(HittedRoutine());
+
+        if (this.hp <= 0)
+            Destroy(this.gameObject);
+    }
+
+    /// <summary>
+    /// 피격 시 Sprite의 컬러값을 일시적으로 변경
+    /// </summary>
+    /// <returns></returns>
+    IEnumerator HittedRoutine()
+    {
+        spriteRenderer.color = Color.red;
+        yield return new WaitForSeconds(0.2f);
+        spriteRenderer.color = Color.white;
     }
 }

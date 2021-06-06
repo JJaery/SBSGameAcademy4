@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1403973464}
   - component: {fileID: 1403973465}
-  - component: {fileID: 1403973466}
+  - component: {fileID: 204615620}
   m_Layer: 7
   m_Name: Renderer
   m_TagString: Untagged
@@ -84,7 +84,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!95 &1403973466
+--- !u!95 &204615620
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 0
@@ -94,7 +94,7 @@ Animator:
   m_GameObject: {fileID: 1403973463}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f431917106a5fb047974bfbc29d84e88, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -174,11 +174,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17809bfbf17b1524880a93497c226683, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animator: {fileID: 1403973466}
+  animator: {fileID: 204615620}
   spriteRenderer: {fileID: 1403973465}
   hp: 0
   moveSpeed: 1
   dmg: 0
   curState: 0
   moveDir: {x: 0, y: 0, z: 0}
-  recogRange: 2
+  recogRange: 6
+  attackTarget: {fileID: 0}
